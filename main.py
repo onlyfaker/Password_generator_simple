@@ -17,7 +17,10 @@ while sum_of_characters>0:
     if choice==0:
         if nr_letters>0:
             random_letter = random.choice(letters)
-            password.append(random_letter)
+            if random.randint(0,1)==0:
+                password.append(random_letter)
+            else:
+                password.append(random_letter.upper())
             nr_letters-=1
             sum_of_characters-=1
     elif choice==1:
